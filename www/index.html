@@ -8,28 +8,76 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #b6fbff;
+            color: black;
+            margin: 50px 50px;
+            padding: 20px 20px;
+        }
+        h1 {
+            text-align: center;
+            color: purple;
+            text-shadow: black 1px 1px 2px;
+            text-shadow: 1px 1px 30px turquoise; 
+        }
+    </style>
     <script>
-        var valor01, valor02, resultadoA, resultadoS, resultadoM, resultadoE
+        var valor01, valor02;
 
-        function Somar() {
-            valor01 = parseInt(document.getElementById('valor01').value)
-            valor02 = parseInt(document.getElementById('valor02').value)
+        function Calculadora() {
+            valor01 = parseInt(document.getElementById('valor01').value);
+            valor02 = parseInt(document.getElementById('valor02').value);
+            const operacao = document.getElementById('operacoes').value;
 
-            resultadoA = valor01 + valor02;
-            resultadoS = valor01 - valor02;
-            resultadoM = valor01 * valor02;
-            resultadoE = valor01 ** valor02;
+            let resultado = 0;
 
-            document.getElementById('resultado').innerHTML = resultadoS resultadoA resultadoM resultadoE
+            switch (operacao) {
+                case 'Adicao':
+                    resultado = valor01 + valor02;
+                    break;
+                case 'Subtracao':
+                    resultado = valor01 - valor02;
+                    break;
+                case 'Multiplicacao':
+                    resultado = valor01 * valor02;
+                    break;
+                case 'Exponenciacao':
+                    resultado = valor01 ** valor02;
+                    break;
+                case 'Divisao':
+                    if (valor02 !== 0) {
+                        resultado = valor01 / valor02;
+                    } else {
+                        resultado = 'Ué fi, não dá pra dividir por 0, doido';
+                    }
+                    break;
+            }
+
+            document.getElementById('resultado').innerHTML = `Resultado = ${resultado}`;
         }
     </script>
 </head>
 <body>
-	<br />
-    <h1>Calculadora<h1>
-    <input type="text" placeholder="Insira o primeiro valor: " id="valor01">
-    <input type="text" placeholder="Insira o segundo valor: " id="valor02">
-    <input type="button" value="Somar" id="BtnSomar" onclick="Somar()">
+    <br>
+    <h1>Calculadora</h1>
+    <label for="valor01">Insira o primeiro valor</label>
+    <input type="number" placeholder="Insira o primeiro valor: " id="valor01">
+    <br>
+    <label for="valor02">Insira o segundo valor</label>
+    <input type="number" placeholder="Insira o segundo valor: " id="valor02">
+    <br>
+    <label for="operacoes">Escolha a operação:</label>
+    <select name="operacoes" id="operacoes">
+        <option value="Adicao">Adição</option>
+        <option value="Subtracao">Subtração</option>
+        <option value="Multiplicacao">Multiplicação</option>
+        <option value="Divisao">Divisão</option>
+        <option value="Exponenciacao">Exponenciação</option>
+    </select>
+    <br>
+    <button onclick="Calculadora()">Enviar</button>
+
     <h1 id="resultado"> </h1>
 </body>
 </html>

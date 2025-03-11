@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Emblema+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 0px 2px 5px rgb(131, 40, 221);
+}
+
+a {
+    text-decoration: none !important;
+    font-weight: normal;
+    color: white;
+}
+
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none !important;
+    font-weight: normal;
+    color: white;
+}
+
+input {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Header {
+    background-color: #003366;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0px 2px 5px rgb(131, 40, 221);
+    font-family: 'Emblema One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 0px 15px #D3D3D3;
+}
+
+#Logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.Placaaa,
+.Tipo,
+.Modelo,
+.Horas {
+    background-color: #003366;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.Placaaa label,
+.Tipo label,
+.Modelo label,
+.Horas label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#Enviar {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    outline: none;
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Enviar:hover {
+    background-color: #0056b3;
+}
+
+#Enviar:active {
+    background-color: #003366;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+select {
+    background-color: #0666ff;
+    color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    border: none;
+}
+
+.car-list {
+    margin-top: 80px;
+    padding: 10px;
+}
+
+.car-item {
+    background: #2A2D3E;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: opacity 0.5s ease;
+    margin-top: 100px;
+}
+
+.car-item.fade-out {
+    opacity: 0; 
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.form-group {
+    background-color: #003366;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#Home_bnt {
+    background-color: #003366;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

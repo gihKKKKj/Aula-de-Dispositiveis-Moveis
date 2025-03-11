@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Vaga 24</title>
+    <link rel="stylesheet" href="./style_Cadastro.css">
+</head>
+
+<body>
+
+    <div class="Header">
+        <a href="./index.html">
+            <h1>Pit Spot</h1>
+        </a>
+        <img src="./img/LOGO.jpg" id="Logo" alt="Logo">
+    </div>
+    <h2>Cadastro</h2>
+
+    <div class="Placaaa">
+        <label for="selecionarPlaca">Selecione o tipo de placa:</label>
+        <br>
+        <select name="selecione" id="tipoPlaca">
+            <option value="convencional">Convencional</option>
+            <option value="mercosul">MERCOSUL</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <Label for="placa">Digite a placa do carro: </Label>
+        <input type="text" id="placa" name="placa" maxlength="8" minlength="7" pattern="[a-zA-Z0-9]+" placeholder="Ex: XXXX-XXXX" style="border: 1px solid;">
+    </div>
+
+    <div class="Tipo">
+        <label for="selecionarPlaca">Selecione o tipo de carro:</label>
+        <br>
+        <select name="selecioneCarro" id="Modelo">
+            <option value="compacto">Compacto</option>
+            <option value="hatch">Hatch</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="picape">Picape</option>
+        </select>
+    </div>
+
+    <div class="Modelo">
+        <label for="verificacao">Seu carro é elétrico ou convencional?</label>
+        <br>
+        <select name="selecionarTipoCarro" id="tipo">
+            <option value="eletrico">Elétrico</option>
+            <option value="manual">Convencional</option>
+        </select>
+    </div>
+
+    <div class="Horas">
+        <label for="tempo">Quantas horas você utilizará a vaga?</label>
+        <select name="horas" id="horas">
+            <option value="1">1 hora</option>
+            <option value="5">5 horas</option>
+            <option value="24">24 horas</option>
+        </select>
+    </div>
+
+    <button onclick="CadastrarCarro()" id="Enviar">Enviar</button>
+    <a href="./index.html" id="Home_bnt">Home</a>
+
+    <div class="car-list" id="carList"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

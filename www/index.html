@@ -1,83 +1,59 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <script src="cordova.js"></script>
-    <script src="components/loader.js"></script>
-    <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            background-color: #b6fbff;
-            color: black;
-            margin: 50px 50px;
-            padding: 20px 20px;
-        }
-        h1 {
-            text-align: center;
-            color: purple;
-            text-shadow: black 1px 1px 2px;
-            text-shadow: 1px 1px 30px turquoise; 
-        }
-    </style>
-    <script>
-        var valor01, valor02;
-
-        function Calculadora() {
-            valor01 = parseInt(document.getElementById('valor01').value);
-            valor02 = parseInt(document.getElementById('valor02').value);
-            const operacao = document.getElementById('operacoes').value;
-
-            let resultado = 0;
-
-            switch (operacao) {
-                case 'Adicao':
-                    resultado = valor01 + valor02;
-                    break;
-                case 'Subtracao':
-                    resultado = valor01 - valor02;
-                    break;
-                case 'Multiplicacao':
-                    resultado = valor01 * valor02;
-                    break;
-                case 'Exponenciacao':
-                    resultado = valor01 ** valor02;
-                    break;
-                case 'Divisao':
-                    if (valor02 !== 0) {
-                        resultado = valor01 / valor02;
-                    } else {
-                        resultado = 'Ué fi, não dá pra dividir por 0, doido';
-                    }
-                    break;
-            }
-
-            document.getElementById('resultado').innerHTML = `Resultado = ${resultado}`;
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <br>
-    <h1>Calculadora</h1>
-    <label for="valor01">Insira o primeiro valor</label>
-    <input type="number" placeholder="Insira o primeiro valor: " id="valor01">
-    <br>
-    <label for="valor02">Insira o segundo valor</label>
-    <input type="number" placeholder="Insira o segundo valor: " id="valor02">
-    <br>
-    <label for="operacoes">Escolha a operação:</label>
-    <select name="operacoes" id="operacoes">
-        <option value="Adicao">Adição</option>
-        <option value="Subtracao">Subtração</option>
-        <option value="Multiplicacao">Multiplicação</option>
-        <option value="Divisao">Divisão</option>
-        <option value="Exponenciacao">Exponenciação</option>
-    </select>
-    <br>
-    <button onclick="Calculadora()">Enviar</button>
 
-    <h1 id="resultado"> </h1>
+<body>
+    <div class="Header">
+        <a href="./index.html">
+            <h1>Pit Spot</h1>
+        </a>
+        <img src="./img/LOGO.jpg" id="Logo" alt="Logo">
+    </div>
+
+    <a href="Cadastro.html">
+        <div class="Cadastro">
+            <p>Agendar vaga</p>
+            <i class="fa-solid fa-address-card" style="color: #ffffff;"></i>
+        </div>
+    </a>
+
+
+    <a href="./Agendar.html">
+    <div class="Consulta">
+        <p>Consultar valores</p>
+        <i class="fa-solid fa-dollar-sign"></i>
+    </div>
+    </a>
+
+    <a href="./Sobre.html">
+        <div class="Sobre">
+            <p>Sobre nós</p>
+            <i class="fa-regular fa-id-badge"></i>
+        </div>
+    </a>
+
+    <div class="footer">
+        <p>Para entrar em contato: </p>
+
+        <div class="icons">
+            <a href="http://">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="http://">
+                <i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="http://">
+                <i class="fa-brands fa-square-whatsapp fa-xl" style="color: #ffffff;"></i>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>

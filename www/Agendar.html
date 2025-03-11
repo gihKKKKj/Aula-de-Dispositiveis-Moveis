@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Emblema+One&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        a {
+            text-decoration: none !important;
+            font-weight: normal;
+            color: white;
+        }
+
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none !important;
+            font-weight: normal;
+            color: white;
+        }
+        #h2 {
+            text-align: center;
+            font-family: Emblema One;
+            font-size: 50px;
+            text-shadow: 0px 0px 10px #8328dd;
+        }
+
+        .Header {
+            background-color: #003366;
+            text-align: center;
+            padding: 25px 0px 25px 20px;
+            text-shadow: 0px 2px 5px #8328dd;
+            font-family: Emblema One;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            position: relative;
+            box-shadow: 0px 0px 15px #D3D3D3;
+        }
+
+        #Logo {
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #d3d3d3bb;
+            background-color: rgb(16, 26, 85);
+            padding: 10px;
+            display: inline-block;
+            max-width: 100%;
+            position: absolute;
+            top: 355px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 300px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #003366;
+            text-align: center;
+        }
+
+        th {
+            background-color: #003366;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #003366;
+        }
+        .card {
+            background-color: #1E1E2E;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px #d3d3d3bb;
+            max-width: 300px;
+            position: absolute;
+            top: 655px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            margin: 15px 0 10px;
+            color: #FFA500;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00FF7F;
+            margin: 10px 0;
+        }
+        .botoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #Home_bnt {
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 20px;
+            position: absolute;
+            top: 100vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="Header">
+        <a href="./index.html">
+            <h1>Pit Spot</h1>
+        </a>
+        <img src="./img/LOGO.jpg" id="Logo" alt="Logo">
+    </div>
+
+    <h2 id="h2">valores</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Tempo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Compacto</td>
+                    <td>1h</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td>Hatch</td>
+                    <td>1h</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td>Sedan</td>
+                    <td>1h</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td>Suv</td>
+                    <td>1h</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td>Pickur</td>
+                    <td>1h</td>
+                    <td>R$ 4,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Promoção Imperdível!</h2>
+        <p>Carros eletricos tem desconto de 50% na primeira hora!!</p>
+        <div class="price">🔥 50% off 🔥</div>
+    </div>
+
+    <a href="./index.html" id="Home_bnt">Home</a>
+
+</body>
+
+</html>
